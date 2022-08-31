@@ -1,0 +1,92 @@
+.App {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #d9afd9;
+  background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
+}
+#header {
+  text-shadow: 2px 2px grey;
+  font-size: 30px;
+}
+.expenses {
+  width: 90%;
+}
+.expenses p {
+  font-size: 20px;
+}
+.inc-exp {
+  display: flex;
+  border: 1px solid black;
+  gap: 30px;
+  width: 90%;
+  justify-content: center;
+  border-radius: 30px;
+  box-shadow: 2px 4px grey;
+  text-align: center;
+}
+.income p {
+  font-size: 20px;
+}
+.expenses2 p {
+  font-size: 20px;
+}
+.transaction {
+  width: 90%;
+}
+.text {
+  width: 90%;
+  font-size: 20px;
+}
+.line {
+  border-left: 1px solid black;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.expenses2 h1 {
+  color: magenta;
+}
+.income h1 {
+  color: aqua;
+}
+
+.mrg-exp {
+  display: flex;
+  border: 1px solid black;
+  justify-content: space-between;
+  border-radius: 30px;
+  box-shadow: 2px 3px grey;
+}
+
+.shop-exp {
+  display: flex;
+  border: 1px solid black;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+.del-btn {
+  background-color: magenta;
+  border: none;
+  color: white;
+  padding: 5px 12px;
+  font-size: 20px;
+  border-radius: 40px;
+}
+.history {
+  width: 90%;
+}
+.footer-btn {
+  width: 95%;
+}
+.btn {
+  background-color: magenta;
+  border: none;
+  color: white;
+  padding: 5px 12px;
+  font-size: 20px;
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 30px;
+}

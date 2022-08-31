@@ -1,0 +1,38 @@
+.App {
+  display: flex;
+  text-align: center;
+  background-color: grey;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #d9afd9;
+  background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
+}
+.card {
+  width: 90%;
+}
+.todo-input {
+  display: flex;
+}
+.todo-text {
+  flex-grow: 1;
+  margin-right: 15px;
+  height: 40px;
+  font-size: 16px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+.clear-btn {
+  background-color: red;
+  color: #fff;
+  width: 100px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}

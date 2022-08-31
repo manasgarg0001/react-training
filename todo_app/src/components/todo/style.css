@@ -1,0 +1,25 @@
+.todo-list {
+  display: flex;
+
+  margin: 20px 0px;
+  background-color: lightgrey;
+  border-radius: 5px;
+}
+.cbox {
+  margin: 10px;
+}
+.todo-list p {
+  flex-grow: 1;
+  text-align: left;
+}
+.add-button {
+  height: 30px;
+  align-self: center;
+  margin: 10px;
+}
+
+.del-button {
+  height: 30px;
+  align-self: center;
+  margin-right: 10px;
+}

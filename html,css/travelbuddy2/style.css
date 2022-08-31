@@ -82,7 +82,7 @@ ul {
 
 .banner {
     width: 100%;
-    height: 800px;
+    height: 400px;
     background: url('assets/banner_bg .png')no-repeat center center/cover;
     display: flex;
     flex-direction: column;
@@ -126,7 +126,9 @@ ul {
     align-content: center;
     justify-content: space-around;
 }
-
+.image{
+    text-align: center;
+}
 .image img {
     left: 30.32%;
     Width: 260.55px;
@@ -135,8 +137,8 @@ ul {
 }
 
 .image h2 {
-    position: relative;
-    left: 10.88%;
+    font-size: 50px;
+   
     Width: 443px;
     Height: 63px;
     color: #041562;
@@ -384,7 +386,6 @@ ul {
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;
-    margin-top: -155px;
     text-align: left;
 }
 
@@ -393,7 +394,7 @@ ul {
 }
 
 .contact address {
-    padding-top: 125px;
+    padding-top: 10px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -432,6 +433,7 @@ ul {
 
 .s-media a {
     text-align: left;
+    padding: 10px;
 }
 .end {
     display: flex;

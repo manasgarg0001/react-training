@@ -26,6 +26,7 @@ ul {
     width: 100%;
     max-width: 100%;
     margin: auto;
+    
 }
 
 .icon img {
@@ -42,13 +43,23 @@ ul {
     font-size: 18px;
     font-weight: 400;
     line-height: 22px;
+
 }
 
 .main-nav ul {
     display: flex;
     column-gap: 20px;
+    align-items: center;
 }
 
+.link {
+    display: none;
+
+}
+
+.bton{
+    display: none;
+}
 
 .main-menu li {
     padding: 0 10px;
@@ -73,6 +84,14 @@ ul {
 .icon h4 {
     margin-top: 21px;
     margin-left: 15px;
+}
+
+#check {
+    display: none;
+}
+
+.checkbtn {
+    display: none;
 }
 
 .btn1 {
@@ -142,6 +161,11 @@ ul {
 
 .menu2 li {
     padding: 0 10px;
+}
+
+.main-menu {
+    flex-wrap: wrap;
+    display: contents;
 }
 
 .top-place {
@@ -228,7 +252,7 @@ h2 {
     padding: 30px 100px;
 }
 
-.child-grid img{
+.child-grid img {
     width: 100%;
     height: auto;
 }
@@ -378,14 +402,17 @@ h2 {
     padding: 30px;
     justify-content: space-around;
 }
-.first img{
-    width:100%;
+
+.first img {
+    width: 100%;
 }
-.second img{
-    width:100%;
+
+.second img {
+    width: 100%;
 }
-.third img{
-    width:100%;
+
+.third img {
+    width: 100%;
 }
 
 .best-service-card p {
@@ -416,6 +443,7 @@ h2 {
     padding: 108px 100px;
     color: #fff;
     margin-top: 100px;
+    flex-wrap: wrap;
 }
 
 .footer-img h2 {
@@ -517,4 +545,146 @@ h2 {
     height: 65px;
     background: #000B3E;
     color: #f3f3f3;
+}
+
+/* media queries */
+
+@media screen and (max-width: 425px){
+    .grid{
+        display: block;
+    }
+    .best-service-card{
+        display: block;
+    }
+   
+}
+@media screen and (max-width: 1211px) {
+    .filter {
+
+        border: 1px solid blueviolet;
+        position: absolute;
+
+        left: 0;
+        right: 0;
+        top: -40px;
+        width: 100%;
+        height: auto;
+        background-color: #fff;
+        margin: auto;
+
+    }
+
+    .visit {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 425px) {
+    .visit {
+        display: flex;
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        padding: 15px 21px;
+        gap: 44px;
+    }
+   
+}
+
+@media screen and (max-width: 590px) {
+    .main-nav {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .link {
+        display: block;
+        background: none;
+        border: none;
+        text-decoration: none;
+        color: #777;
+        font-family: inherit;
+        font-size: inherit;
+        cursor: pointer;
+        padding: 0;
+    }
+    
+    .link:hover {
+        color: #000;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .main-menu li {
+        padding: 10px 10px;
+    }
+    .main-menu {
+        display: flex;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        padding: 12px 16px;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        
+    }
+
+    .main-nav ul {
+        display: block;
+        top: 4rem;
+        margin-right: 25px;
+        margin-left: 240px;
+        
+    }
+
+   
+
+    .checkbtn {
+        display: block;
+    }
+
+    .dropdown:hover .main-menu {
+        display: block;
+    }
+
+    .nav-menu .main-menu {
+        position: absolute;
+        width: 50%;
+        height: 100vh;
+        background: rgba(247, 249, 249, 0.783);
+        top: 97px;
+        right: -60%;
+        transition: all .5s;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+    justify-content: space-between;
+    }
+
+    .nav-menu .main-menu li {
+        display: block;
+        padding: 10px;
+    }
+
+    #check:checked~.main-menu {
+       right : -4%;
+    }
+}
+@media screen and (min-width: 300px) and (max-width :800px) {
+    .bton{
+        display: block;
+        
+        background-color: #FF5403;
+        padding: 15px;
+    }
+    .btn{
+        display: none;
+    }
 }
