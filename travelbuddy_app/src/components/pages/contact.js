@@ -16,7 +16,6 @@ const Contact = () => {
   return (
     <>
       <Box>
-        <NavBar image={Vector} />
         <CardBuddy image={Banner_bg}>
           <Box
             sx={{

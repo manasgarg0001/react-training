@@ -14,12 +14,19 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 
 import CardMedia from "@mui/material/CardMedia";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
-const pages = ["Home", "about", "packages", "Place", "Contact"];
+const pages = [
+  { title: "Home", path: "/" },
+  { title: "About", path: "/about" },
+  { title: "Packages", path: "/packages" },
+  { title: "Places", path: "/place" },
+  { title: "Contact", path: "/contact" },
+];
 const settings = ["Home", "about", "packages", "Place", "Contact"];
 
 const NavBar = (props) => {
+  const history = useHistory();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -100,9 +107,9 @@ const NavBar = (props) => {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+              {pages.map((page, index) => (
+                <MenuItem key={index} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">{page.title}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -138,14 +145,20 @@ const NavBar = (props) => {
               },
             }}
           >
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "gray", display: "block" }}
-              >
-                {page}
-              </Button>
+            {pages.map((page, index) => (
+              <Link to={`${page.path}`} style={{ textDecoration: "none" }}>
+                <Button
+                  key={index}
+                  // onClick={() => history.push("/contact")}
+                  sx={{
+                    my: 2,
+                    color: "gray",
+                    display: "block",
+                  }}
+                >
+                  {page.title}
+                </Button>
+              </Link>
             ))}
           </Box>
           <Button variant="contained" sx={{ backgroundColor: "#ff5733" }}>

@@ -2,6 +2,21 @@ import React from "react";
 import { Formik, Field, Form } from "formik";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
+import * as Yup from "yup";
+
+const SignupSchema = Yup.object().shape({
+  message: Yup.string()
+    .min(2, "Too Short!")
+    .max(50, "Too Long!")
+
+    .required("this field is required"),
+  firstName: Yup.string()
+    .min(2, "Too Short!")
+    .max(50, "Too Long!")
+    .required("this field is required"),
+  email: Yup.string().email("Invalid email").required("email is required"),
+  subject: Yup.string().required("this field is required"),
+});
 
 const InputForm = () => {
   return (
@@ -9,10 +24,11 @@ const InputForm = () => {
       <Formik
         initialValues={{
           message: "",
-          userName: "",
+          firstName: "",
           email: "",
           subject: "",
         }}
+        validationSchema={SignupSchema}
         onSubmit={async (values, { resetForm }) => {
           await new Promise((r) => setTimeout(r, 500));
           alert(JSON.stringify(values, null, 2));
@@ -36,16 +52,24 @@ const InputForm = () => {
               placeholder="Enter message"
               multiline={true}
               rows={5}
-              value={props.values.firstname}
+              value={props.values.message}
               onChange={props.handleChange}
+              error={props.errors.message}
+              helperText={props.errors.message}
+              onBlur={props.handleBlur}
             />
+
             <TextField
-              id="userName"
-              name="userName"
+              id="firstName"
+              name="firstName"
               placeholder="Enter your name"
-              value={props.values.firstname}
+              value={props.values.firstName}
               onChange={props.handleChange}
+              error={props.errors.firstName}
+              helperText={props.errors.firstName}
+              onBlur={props.handleBlur}
             />
+
             <TextField
               id="email"
               name="email"
@@ -53,7 +77,11 @@ const InputForm = () => {
               type={"email"}
               value={props.values.email}
               onChange={props.handleChange}
+              error={props.errors.email}
+              helperText={props.errors.email}
+              onBlur={props.handleBlur}
             />
+
             <TextField
               id="subject"
               name="subject"
@@ -61,7 +89,11 @@ const InputForm = () => {
               type={"subject"}
               value={props.values.subject}
               onChange={props.handleChange}
+              error={props.errors.subject}
+              helperText={props.errors.subject}
+              onBlur={props.handleBlur}
             />
+
             <Button
               variant="contained"
               type="submit"
@@ -82,3 +114,7 @@ const InputForm = () => {
 };
 
 export default InputForm;
+
+
+
+//https://codesandbox.io/s/wonderful-bassi-0ff5vz?file=/src/form.js:0-1764

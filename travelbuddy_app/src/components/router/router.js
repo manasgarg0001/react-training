@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import NavBar from "./components/navbar/";
+import NavBar from "../navbar";
+import Contact from "../../components/pages/contact";
+import Home from "../pages/home";
 
 const Routes = () => {
   return (
@@ -10,9 +12,9 @@ const Routes = () => {
         <Route path="/" exact>
           <Home />
         </Route>
-        <Route path="/about">
+        {/* <Route path="/about">
           <About />
-        </Route>
+        </Route> */}
         <Route path="/package">
           <Contact />
         </Route>
@@ -22,9 +24,9 @@ const Routes = () => {
         <Route path="/contact">
           <Contact />
         </Route>
-        <Route path="*">
+        {/* <Route path="*">
           <NotFound />
-        </Route>
+        </Route> */}
       </Switch>
     </Router>
   );
